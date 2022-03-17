@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khushvant</title>
+</head>
+<body>
+    <svg id="page-loader">
+        <circle cx="75" cy="75" r="20" ></circle>
+        <circle cx="75" cy="75" r="35" ></circle>
+        <circle cx="75" cy="75" r="50" ></circle>
+        <circle cx="75" cy="75" r="65" ></circle>
+        
+    </svg>
+    <style>
+        body{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            height:100vh;
+        }
+        #page-loader{
+         width:150px;
+         height:150px;
+        }
+        #page-loader circle{
+            fill:none;
+            stroke-width:10;
+            stroke-linecap: round;
+        }
+        
+        #page-loader circle:nth-child(1){
+            stroke:coral;
+            stroke-dasharray: 80;
+        }
+        #page-loader circle:nth-child(2){
+            stroke:gold;
+            stroke-dasharray: 120;
+        }
+        #page-loader circle:nth-child(3){
+            stroke:rgb(14, 248, 131);
+            stroke-dasharray: 200;
+        }
+        #page-loader circle:nth-child(4){
+            stroke:rgb(1, 124, 196);
+            stroke-dasharray: 350;
+            stroke-dashoffset: -150;
+        }
+        @keyframes loader{
+           50%{
+               transform: rotate(450deg);
+           }
+        }
+        #page-loader circle{
+            animation-name:loader;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            transform-origin: center center;
+        }
+        
+        #page-loader circle:nth-child(1){
+            animation-delay: -.2s;
+        }
+        #page-loader circle:nth-child(2){
+            animation-delay: -.4s;
+        }
+        #page-loader circle:nth-child(3){
+            animation-delay: -.6s;
+        }
+        #page-loader circle:nth-child(4){
+            animation-delay: -.8s;
+        }
+    </style>
+</body>
+</html>
